@@ -36,7 +36,7 @@ header h1 {
 }
 main {
     height: 100%;
-    overflow: scroll;
+    /* overflow: scroll; */
     padding: 120px 0 120px;
 }
 main section {
@@ -94,7 +94,7 @@ footer {
   }
 .weather-infos-container {
     width: 100%;
-    background-color: var(--lighter-blue);
+    background-color: #fff;
     -webkit-box-shadow: 5px 5px 17px 5px var(--light-grey); 
     box-shadow: 5px 5px 17px 5px var(--light-grey);
     display: flex;
