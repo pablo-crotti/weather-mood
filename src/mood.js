@@ -43,7 +43,7 @@ const getMoodCode = async () => {
     const weathercode = weatherApi.weather.current_weather.weathercode
     const temp = weatherApi.weather.current_weather.temperature
   
-    moodCode = findMood(weathercode, temp)
+    let moodCode = findMood(weathercode, temp)
   
     if (moodCode >= 0) {
       return {
