@@ -128,6 +128,9 @@ footer {
     color: var(--primary);
     margin-bottom: -5px;
 }
+.playlist-det {
+    margin-top: -20px;
+}
 .playlist-container {
     width: 100%;
     height: 100px;
@@ -192,7 +195,12 @@ footer {
     width: 100%;
     color: var(--primary);
     font-size: 20px;
+    margin-bottom: -2px;
     width: 100%;
+}
+.playlist-txt-container p {
+    margin-bottom: 5px;
+    color: var(--grey);
 }
 .preview-item-container {
     display: flex;
@@ -231,6 +239,9 @@ footer {
     margin-top: -2px;
     margin-bottom: -2px;
     color: var(--primary);
+}
+.preview-item p {
+    color: var(--grey);
 }
 .change-mood-container {
     width: 100%;

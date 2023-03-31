@@ -27,10 +27,6 @@ const aboutWeather = async (position) => {
 const getWeathercode = async () => {
     const position = await getPosition();
     const weatherApi = await aboutWeather(position)
-    // console.log(1)
-    // const cityApi = await getCity(position)
-    
-    // console.log(cityApi)
     return {
       'weather': weatherApi
     }

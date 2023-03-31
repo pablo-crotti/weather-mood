@@ -1,6 +1,5 @@
 import { getMoodCode } from '../mood'
 import { play } from './player'
-import {timestampTransform, hoursAndMinutes } from '../lib/timestamp'
 let songsCat = {
     "0": {
         "0": {
@@ -564,9 +563,6 @@ const generation = async (infos) => {
     const content = template.content.cloneNode(true)
     const location =  await getIP()
 
-    // const songItem = previewItem.content.cloneNode(true)
-    // console.log(songItem)
-
     const playlist = generatePlaylist(songsCat[infos.mood], 5)
 
     content.querySelector('h2').innerText = `${infos.temp}°C`
@@ -590,6 +586,7 @@ const generation = async (infos) => {
     </div>
     <div class="playlist-txt-container">
         <h2>Your playlist is ready</h2>
+        <p>${playlist.length} songs</p>
         <button class="play">
             <span class="material-icons">play_arrow</span>
         </button>
@@ -597,15 +594,9 @@ const generation = async (infos) => {
     </div> `
     
     const previewContainer = content.querySelector('.preview-container')
-    let totalTime = 0
-    playlist.forEach(song => {
-        totalTime += timestampTransform(song.duration)
-    })
 
     songListVis(previewContainer, playlist, 3)
-
     
-    content.querySelector('.playlist-det p').innerText = `${playlist.length + 1} artists - ${hoursAndMinutes(totalTime)}`
     section.append(content)
 
     section.querySelector('.play').addEventListener('click', function() {
