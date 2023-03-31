@@ -25,6 +25,9 @@ const songListContainer = document.querySelector('.songs')
 const play = (song, songs) => {
     currentSong = song
 
+    audioPlayer.src = currentSong.url
+    audioPlayer.play()
+
     songListContainer.replaceChildren()
 
     if (songs) {
@@ -59,12 +62,11 @@ const play = (song, songs) => {
       }
     }
 
-    cover.querySelector('img').src = song.img
-    playerSongTitle.innerHTML = song.title
-    playerArtistName.innerHTML = song.artist
+    cover.querySelector('img').src = currentSong.img
+    playerSongTitle.innerHTML = currentSong.title
+    playerArtistName.innerHTML = currentSong.artist
 
-    audioPlayer.src = song.url
-    audioPlayer.play()
+    
 
 }
 
