@@ -1,5 +1,5 @@
 import { getMoodCode } from '../mood'
-import { play } from './player'
+import { playFunc } from './player'
 let songsCat = {
     "0": {
         "0": {
@@ -596,7 +596,7 @@ const generation = async (infos) => {
     section.append(content)
 
     section.querySelector('.play').addEventListener('click', function() {
-        play(playlist[0], playlist)
+        playFunc(playlist[0], playlist)
         window.location.hash = '#player'
     })
 

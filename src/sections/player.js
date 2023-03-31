@@ -130,4 +130,4 @@ audioPlayer.addEventListener('durationchange', () => {
 audioPlayer.addEventListener('play', updateIcon)
 audioPlayer.addEventListener('pause', updateIcon)
 
-export { play }
+export { playFunc }
