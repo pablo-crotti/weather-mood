@@ -22,7 +22,7 @@ const playerProgress = document.querySelector('#player-progress-bar')
 const songListContainer = document.querySelector('.songs')
 
 
-const play = (song, songs) => {
+const playFunc = (song, songs) => {
     currentSong = song
 
     audioPlayer.src = currentSong.url
@@ -57,7 +57,7 @@ const play = (song, songs) => {
           songListContainer.insertAdjacentHTML('beforeend', songItem)
 
           document.querySelector(`#id-${i}`).addEventListener('click', function(e) {
-            play(songList[i], songList)
+            playFunc(songList[i], songList)
           })
       }
     }
@@ -75,9 +75,9 @@ const playPreviousSong = () => {
   const newIndex = index - 1
   // On s'assure qu'on n'arrive jamais en dehors du tableau et on reboucle sur la fin
   if(newIndex >= 0)
-    play(songList[newIndex])
+    playFunc(songList[newIndex])
   else
-    play(songList[songList.length - 1])
+    playFunc(songList[songList.length - 1])
 }
 
 const playNextSong = () => {
@@ -85,9 +85,9 @@ const playNextSong = () => {
   const newIndex = index + 1
   // On s'assure qu'on n'arrive jamais en dehors du tableau et on reboucle sur le début
   if(newIndex < songList.length)
-    play(songList[newIndex])
+    playFunc(songList[newIndex], songList)
   else
-    play(songList[0])
+    playFunc(songList[0], songList)
 }
 
 // Bouton précédent
