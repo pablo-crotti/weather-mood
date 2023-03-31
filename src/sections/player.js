@@ -75,9 +75,9 @@ const playPreviousSong = () => {
   const newIndex = index - 1
   // On s'assure qu'on n'arrive jamais en dehors du tableau et on reboucle sur la fin
   if(newIndex >= 0)
-    playFunc(songList[newIndex])
+    playFunc(songList[newIndex], songList)
   else
-    playFunc(songList[songList.length - 1])
+    playFunc(songList[songList.length - 1], songList)
 }
 
 const playNextSong = () => {
