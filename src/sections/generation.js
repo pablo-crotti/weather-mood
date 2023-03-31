@@ -482,7 +482,6 @@ const getIP = async () => {
   
       const data = await res.json();
   
-      console.log(data);
       return data
   
     } catch (e) {
@@ -491,7 +490,7 @@ const getIP = async () => {
   
     }
   
-  };
+};
 
 function generatePlaylist(obj, numItems) {
     let items = Object.values(obj);
@@ -520,12 +519,12 @@ const getIcon = (weathercode) => {
         name = 'cloud'
     } else if (weathercode == 61 || weathercode == 63 || weathercode == 65
         || weathercode == 66 || weathercode == 67) {
-        name = 'rainy'
+        name = 'water_drop'
     } else if (weathercode == 71 || weathercode == 73 || weathercode == 75
         || weathercode == 85 || weathercode == 86 || weathercode == 77) {
-        name = 'weather_snowy'
+        name = 'cloudy_snowing'
     } else if (weathercode == 80 || weathercode == 81 || weathercode == 82) {
-        name = 'rainy'
+        name = 'water_drop'
     } else if (weathercode == 95 || weathercode == 96 || weathercode == 99) {
         name = 'thunderstorm'
     } 
@@ -549,10 +548,7 @@ const songListVis = (container, list, nb) => {
                     <p>${list[i].artist}</p>
                 </div>
             </div>` 
-
-            // console.log(songItem)
             container.insertAdjacentHTML('beforeend', songItem)
-            console.log(container.innerHTML)
         }
     }
 }

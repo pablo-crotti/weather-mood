@@ -21,21 +21,41 @@ const playerProgress = document.querySelector('#player-progress-bar')
 
 const songListContainer = document.querySelector('.songs')
 
+
 const play = (song, songs) => {
     currentSong = song
+
+    songListContainer.replaceChildren()
 
     if (songs) {
         songList = songs
         for (let i = 0; i < songList.length; i++) {
-          const songItem = `<div class="preview-item">
+          let songItem
+          if(songList[i].id == currentSong.id) {
+            songItem = `<div class="preview-item" id="id-${i}">
               <div class="album-img"><img src="${songList[i].img}"></div>
               <div class="song-infos">
                   <h3>${songList[i].title}</h3>
                   <p>${songList[i].artist}</p>
               </div>
-          </div>` 
+              <span class="playing"><p>Now playing</p></span>
+            </div>` 
+          } else {
+            songItem = `<div class="preview-item" id="id-${i}">
+              <div class="album-img"><img src="${songList[i].img}"></div>
+              <div class="song-infos">
+                  <h3>${songList[i].title}</h3>
+                  <p>${songList[i].artist}</p>
+              </div>
+            </div>` 
+          }
+          
 
           songListContainer.insertAdjacentHTML('beforeend', songItem)
+
+          document.querySelector(`#id-${i}`).addEventListener('click', function(e) {
+            play(songList[i], songList)
+          })
       }
     }
 
@@ -45,10 +65,6 @@ const play = (song, songs) => {
 
     audioPlayer.src = song.url
     audioPlayer.play()
-
-    
-
-    console.log(song.duration)
 
 }
 
