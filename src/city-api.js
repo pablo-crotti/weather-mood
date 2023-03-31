@@ -8,7 +8,7 @@ const loadJson = (url) => {
 }
 
 const getCity = async (position) => {
-    return loadJson(`${BASE_URL}x=${position.lat}&y=${position.long}&type=station `)
+    // return loadJson(`${BASE_URL}x=${position.lat}&y=${position.long}&type=station `)
 }
 
 export { getCity }
