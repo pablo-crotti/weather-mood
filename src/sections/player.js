@@ -25,7 +25,6 @@ const songListContainer = document.querySelector('.songs')
 const playFunc = (song, songs) => {
   currentSong = song
   playerPlayIcon.classList.remove('material-icons-pause')
-  console.log(currentSong)
     audioPlayer.src = currentSong.url
     audioPlayer.play()
 
