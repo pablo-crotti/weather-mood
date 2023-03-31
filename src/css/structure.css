@@ -35,7 +35,7 @@ header h1 {
     
 }
 main {
-    height: 100%;
+    height: contain;
     /* overflow: scroll; */
     padding: 120px 0 120px;
 }
@@ -56,6 +56,7 @@ footer {
     background-color: var(--bg-color);
     position: fixed;
     bottom: 0;
+    left: 0;
     border-top: solid 2px #fff;
   }
   
@@ -213,7 +214,7 @@ footer {
 .preview-item .album-img {
     width: 50px;
     height: 50px;
-    background-color: var(--blue);
+    background-color: var(--primary);
     overflow: hidden;
 }
 .preview-item .song-infos {
@@ -229,7 +230,7 @@ footer {
     font-size: 15px;
     margin-top: -2px;
     margin-bottom: -2px;
-    color: var(--blue);
+    color: var(--primary);
 }
 .change-mood-container {
     width: 100%;
