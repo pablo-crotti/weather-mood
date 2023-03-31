@@ -1,9 +1,9 @@
 {
-  "short_name": "HEIGmail",
-  "name": "HEIGmail - Proudly made by Googlheig",
+  "short_name": "WM",
+  "name": "Weather Mood",
   "icons": [
     {
-      "src": "images/logo_heigmail.png",
+      "src": "images/logo.png",
       "type": "image/png",
       "sizes": "512x512"
     }
