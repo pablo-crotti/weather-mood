@@ -358,14 +358,14 @@ footer {
  input[type="range"] {
      --thumb-height: 1.125em;
      --track-height: 0.125em;
-     --track-color: rgba(0, 0, 0, 0.5);
+     --track-color: var(--primary);
      --brightness-hover: 180%;
      --brightness-down: 80%;
      --clip-edges: 0.125em;
  }
  
  input[type="range"].win10-thumb {
-     color: #2b2d42;
+     color: var(--primary);
  
      --thumb-height: 1.375em;
      --thumb-width: 0.5em;
@@ -441,13 +441,13 @@ footer {
  }
  
  input[type="range"]:hover::-webkit-slider-thumb {
-     filter: brightness(var(--brightness-hover));
-     cursor: grab;
+     /* filter: brightness(var(--brightness-hover)); */
+     /* cursor: grab; */
  }
  
  input[type="range"]:active::-webkit-slider-thumb {
-     filter: brightness(var(--brightness-down));
-     cursor: grabbing;
+     /* filter: brightness(var(--brightness-down)); */
+     /* cursor: grabbing; */
  }
  
  input[type="range"]::-webkit-slider-runnable-track {
