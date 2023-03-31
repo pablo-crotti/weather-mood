@@ -134,6 +134,7 @@ footer {
     width: 75px;
     height: 75px;
     overflow: hidden;
+    margin: 20px 0;
 }
 #player-times span{
     color: var(--grey);
