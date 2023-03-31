@@ -275,11 +275,11 @@ footer {
     justify-content: center;
 }
 .changer-button button {
-    padding: 10px 20px;
+    padding: 20px 40px;
     background-color: var(--primary);
     color: var(--bg-color);
     border: none;
-    border-radius: 10px;
+    border-radius: 100px;
 }
 #player {
     width: 100%;
@@ -345,4 +345,40 @@ footer {
 }
 .songs {
     margin-top: 40px;
+}
+
+input[type=range]::-ms-track {
+    width: 300px;
+    height: 5px;
+    
+    /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+    background: transparent;
+    
+    /*leave room for the larger thumb to overflow with a transparent border */
+    border-color: transparent;
+    border-width: 6px 0;
+
+    /*remove default tick marks*/
+    color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+    background: #777;
+    border-radius: 10px;
+}
+input[type=range]::-ms-fill-upper {
+    background: #ddd;
+    border-radius: 10px;
+}
+input[type=range]::-ms-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: goldenrod;
+}
+input[type=range]:focus::-ms-fill-lower {
+    background: #888;
+}
+input[type=range]:focus::-ms-fill-upper {
+    background: #ccc;
 }
