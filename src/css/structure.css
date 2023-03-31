@@ -365,7 +365,8 @@ footer {
  }
  
  input[type="range"].win10-thumb {
-     color: var(--primary);
+     /* color: var(--primary); */
+     color: #d1d1d1;
  
      --thumb-height: 1.375em;
      --thumb-width: 0.5em;
