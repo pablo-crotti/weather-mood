@@ -53,9 +53,9 @@ const play = (song, songs) => {
 
           songListContainer.insertAdjacentHTML('beforeend', songItem)
 
-          // document.querySelector(`#id-${i}`).addEventListener('click', function(e) {
-          //   play(songList[i], songList)
-          // })
+          document.querySelector(`#id-${i}`).addEventListener('click', function(e) {
+            play(songList[i], songList)
+          })
       }
     }
 
