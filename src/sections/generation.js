@@ -509,26 +509,26 @@ const getIcon = (weathercode) => {
     let name
 
     if (weathercode == 0) {
-        name = '/01d@4x.0494e1ca.png'
+        name = 'sunny'
     } else if (weathercode == 1 || weathercode == 2) {
-        name = '/02d@4x.64457417.png'
+        name = 'sunny'
     } else if (weathercode == 3) {
-        name = '/03d@4x.c878fa9b.png'
+        name = 'sunny'
     } else if (weathercode == 45 || weathercode == 48) {
-        name = '/50d@4x.ab9dc3f3.png'
+        name = 'sunny'
     } else if (weathercode == 51 || weathercode == 53 || weathercode == 55
         || weathercode == 56 || weathercode == 57) {
-        name = '/04d@4x.0d3ee38b.png'
+        name = 'sunny'
     } else if (weathercode == 61 || weathercode == 63 || weathercode == 65
         || weathercode == 66 || weathercode == 67) {
-        name = '/10d@4x.573591b2.png'
+        name = 'sunny'
     } else if (weathercode == 71 || weathercode == 73 || weathercode == 75
         || weathercode == 85 || weathercode == 86 || weathercode == 77) {
-        name = '/13d@4x.8d27d1cc.png'
+        name = 'sunny'
     } else if (weathercode == 80 || weathercode == 81 || weathercode == 82) {
-        name = '/09d@4x.b763f084.png'
+        name = 'sunny'
     } else if (weathercode == 95 || weathercode == 96 || weathercode == 99) {
-        name = '/11d@4x.0450c7bc.png'
+        name = 'sunny'
     } 
     console.log(name)
     return name
@@ -571,7 +571,7 @@ const generation = async (infos) => {
     const playlist = generatePlaylist(songsCat[infos.mood], 5)
 
     content.querySelector('h2').innerText = `${infos.temp}°C`
-    content.querySelector('img').src = getIcon(infos.weathercode)
+    content.querySelector('.icon-container .material-icons').innerText = getIcon(infos.weathercode)
     content.querySelector('p').innerText = `${location.city}, ${location.country_long}`
 
     const playlistContainer = content.querySelector('.playlist-container')
