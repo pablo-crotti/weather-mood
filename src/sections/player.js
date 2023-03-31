@@ -8,6 +8,7 @@ const audioPlayer = document.querySelector('#audio-player')
 
 const playerSongTitle = document.querySelector('#player-infos-song-title')
 const playerArtistName = document.querySelector('#player-infos-artist-name')
+const cover = document.querySelector('.cover')
 
 const playerPrev = document.querySelector('#player-control-previous')
 const playerPlay = document.querySelector('#player-control-play')
@@ -34,13 +35,11 @@ const play = (song, songs) => {
               </div>
           </div>` 
 
-          // console.log(songItem)
           songListContainer.insertAdjacentHTML('beforeend', songItem)
-          // console.log(container.innerHTML)
       }
-        // console.log(songs)
-        // songListVis(songListContainer, songList, songList.lenght)
     }
+
+    cover.querySelector('img').src = song.img
     playerSongTitle.innerHTML = song.title
     playerArtistName.innerHTML = song.artist
 

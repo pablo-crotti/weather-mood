@@ -52,7 +52,7 @@ main section.active {
 footer {
     flex-shrink: 0;
     width: calc(100% + 20px);
-    height: 100px;
+    height: 50px;
     background-color: var(--bg-color);
     position: fixed;
     bottom: 0;
@@ -130,6 +130,17 @@ footer {
 }
 .playlist-det {
     margin-top: -20px;
+}
+.cover {
+    width: 75px;
+    height: 75px;
+    overflow: hidden;
+}
+#player-times span{
+    color: var(--grey);
+}
+.cover img {
+    width: 100%;
 }
 .playlist-container {
     width: 100%;
@@ -365,7 +376,6 @@ footer {
  }
  
  input[type="range"].win10-thumb {
-     /* color: var(--primary); */
      color: #d1d1d1;
  
      --thumb-height: 1.375em;
