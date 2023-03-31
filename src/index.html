@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Weather Mood</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" />
+    <link rel="stylesheet" href="css/index.css" />
+
+    <script src="index.js" type="module" defer></script>
+  </head>
+  <body>
+    <header>
+      <!-- ajouter la classe "animated" à #logo pour animer l'icône -->
+      <a id="logo" href="/">
+        <img src="https://mx3.ch/assets/mx3/logo-905e14e35f85f077bf2cd48dcdec4e9b32e8ca8e91d9e374d3e7a1ca60049d06.png" alt="">
+      </a>
+
+      <div id="logo-wrapper">
+        <h1>Weather <br>Mood</h1>
+      </div>
+    </header>
+    <main>
+      <section id="generation-section" class="active">
+        <template id="generation-template">
+          <div class="weather-infos-container">
+            <div class="icon-container">
+              <img src="icons/01d@4x.png">
+            </div>
+            <div class="infos-container"><h2></h2><p></p></div>
+          </div>
+          <div class="playlist-container">
+            
+          </div>
+          <div class="playlist-det">
+            <p></p>
+          </div>
+          <div class="preview-container">
+            
+          </div>
+
+          <div class="change-mood-container">
+            <div class="range-container">
+              <img src="icons/11d@4x.png">
+              <input type="range" id="change-mood" min="0" max="4"/>
+              <img src="icons/01d@4x.png">
+            </div>
+            <div class="changer-button">
+              <button>Générer une playlist</button>
+            </div>
+          </div>
+        </template>
+      </section>
+      <section id="player-section">
+        <audio id="audio-player"></audio>
+        <div id="player">
+
+          <div id="player-infos">
+            <div id="player-infos-song">
+              <span id="player-infos-song-title">
+                Bla bla je ne sais pas
+              </span>
+            </div>
+
+            <div id="player-infos-artist">
+              <!-- utiliser l'id de cet élément pour changer le nom de l'artiste -->
+              <span id="player-infos-artist-name">
+                Artiste
+              </span>
+            </div>
+          </div>
+
+          <div id="player-controls">
+            <!-- utiliser l'id de cet élément pour ajouter un listener pour le click sur précédent -->
+            <button type="button" class="player-control player-control-small" id="player-control-previous">
+              <span class="material-icons">skip_previous</span>
+            </button>
+            <!-- utiliser l'id de cet élément pour ajouter un listener pour le click sur play/pause -->
+            <button type="button" class="player-control" id="player-control-play">
+              <span class="material-icons">play_arrow</span>
+            </button>
+            <!-- utiliser l'id de cet élément pour ajouter un listener pour le click sur suivant -->
+            <button type="button" class="player-control player-control-small" id="player-control-next">
+              <span class="material-icons">skip_next</span>
+            </button>
+          </div>
+
+          <div id="player-progress">
+            <input type="range" id="player-progress-bar" />
+            <div id="player-times">
+              <!-- utiliser l'id de cet élément pour changer le temps écoulé -->
+              <span id="player-time-current">--:--</span>
+              <!-- utiliser l'id de cet élément pour changer la durée totale -->
+              <span id="player-time-duration">--:--</span>
+            </div>
+          </div>
+        </div>
+        <div class="songs">  
+          
+        </div>
+      </section>
+    </main>
+    <footer>
+      <nav>
+        <a href="#generation" class="active">
+          <span class="material-icons">home</span>
+        </a>
+        <a href="#player">
+          <span class="material-icons">subscriptions</span>
+        </a>
+      </nav>
+    </footer>
+  </body>
+</html>
