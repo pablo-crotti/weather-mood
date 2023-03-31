@@ -1,4 +1,4 @@
-import { getCity } from './city-api'
+// import { getCity } from './city-api'
 
 const BASE_URL = 'https://api.open-meteo.com/v1/forecast?'
 
@@ -28,9 +28,9 @@ const getWeathercode = async () => {
     const position = await getPosition();
     const weatherApi = await aboutWeather(position)
     // console.log(1)
-    const cityApi = await getCity(position)
+    // const cityApi = await getCity(position)
     
-    console.log(cityApi)
+    // console.log(cityApi)
     return {
       'weather': weatherApi
     }
