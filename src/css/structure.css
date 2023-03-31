@@ -245,9 +245,15 @@ footer {
     flex-direction: row;
     justify-content: space-between;
 }
-.range-container img {
+.range-container .material-icons {
     width: 40px;
     height: 40px;
+    color: var(--primary);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
 }
 .range-container input{
     width: calc(100% - 100px);
