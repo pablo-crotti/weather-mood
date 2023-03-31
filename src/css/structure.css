@@ -111,7 +111,14 @@ footer {
     gap: 10px;
 }
 .icon-container .material-icons {
-    width: 100%;
+    width: 100px;
+    height: 100px;
+    font-size: 3rem;
+    color: var(--primary);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 .infos-container {
     width: 60%;

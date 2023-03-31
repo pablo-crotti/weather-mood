@@ -511,26 +511,25 @@ const getIcon = (weathercode) => {
     if (weathercode == 0) {
         name = 'sunny'
     } else if (weathercode == 1 || weathercode == 2) {
-        name = 'sunny'
+        name = 'partly_cloudy_day'
     } else if (weathercode == 3) {
-        name = 'sunny'
+        name = 'cloud'
     } else if (weathercode == 45 || weathercode == 48) {
-        name = 'sunny'
+        name = 'process_chart'
     } else if (weathercode == 51 || weathercode == 53 || weathercode == 55
         || weathercode == 56 || weathercode == 57) {
-        name = 'sunny'
+        name = 'cloud'
     } else if (weathercode == 61 || weathercode == 63 || weathercode == 65
         || weathercode == 66 || weathercode == 67) {
-        name = 'sunny'
+        name = 'rainy'
     } else if (weathercode == 71 || weathercode == 73 || weathercode == 75
         || weathercode == 85 || weathercode == 86 || weathercode == 77) {
-        name = 'sunny'
+        name = 'weather_snowy'
     } else if (weathercode == 80 || weathercode == 81 || weathercode == 82) {
-        name = 'sunny'
+        name = 'rainy'
     } else if (weathercode == 95 || weathercode == 96 || weathercode == 99) {
-        name = 'sunny'
+        name = 'thunderstorm'
     } 
-    console.log(name)
     return name
 }
 
