@@ -31,5 +31,5 @@ Weather Mood is a web application prototype that allows users to check the weath
 - **Exploring Playlists**: Interact with the application to explore different playlists based on the current weather and your mood.
 - **Customization**: You can customize settings and preferences within the app for a personalized experience.
 
-##Contributing
+## Contributing
 Contributions to the project are welcome. Please follow the standard GitHub pull request process to propose changes.
