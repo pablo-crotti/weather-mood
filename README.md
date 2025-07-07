@@ -1,6 +1,6 @@
 # Weather Mood
 
-Weather Mood is a web application prototype that allows users to check the weather and find MX3 playlists based on their mood. This project was created for the **SRG SSR HACKDAYS 2023** and achieved first place (ex aequo) in the 2023 edition.
+Weather Mood is a web application prototype that allows users to check the weather and find MX3 playlists based on their mood. This project was created for the **SRG SSR HACKDAYS 2023** and achieved first place (ex aequo) in the 2023 edition. The prototype can be viewed [here](https://weather-mood-app.netlify.app/).
 
 ## Features
 
